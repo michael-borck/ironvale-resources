@@ -1,0 +1,385 @@
+# IronVale Resources — Brief for content generation
+# Run: ensayo init --brief brief.yaml --output .
+
+company:
+  name: "IronVale Resources"
+  slug: "ironvale-resources"
+  tagline: "Building Western Australia's Future Underground"
+  industry: "managed_it"
+  location: "Perth, Western Australia"
+
+  profile:
+    founded: 2009
+    employees: 180
+    revenue: "$85M annually"
+    structure: "Mid-cap / ASX-listed"
+    description: |
+      A mid-tier iron ore and lithium mining company operating two
+      active mine sites in the Pilbara and one lithium project in the
+      Goldfields-Esperance region. Headquartered in Perth with FIFO
+      workforce rotating to site. Known for strong safety culture,
+      community engagement with Traditional Owners, and early adoption
+      of autonomous mining technologies.
+    key_facts:
+      - "2 active iron ore mines (Pilbara)"
+      - "1 lithium project in development (Goldfields-Esperance)"
+      - "Annual iron ore production: 8Mt"
+      - "Lost Time Injury Frequency Rate: 0.8 (industry-leading)"
+      - "120 FIFO workforce + 60 Perth office staff"
+      - "Heritage agreements with 3 Traditional Owner groups"
+      - "Autonomous haulage fleet in trial at Pilbara East site"
+    services:
+      - "Iron ore mining and processing"
+      - "Lithium exploration and development"
+      - "Autonomous mining technology adoption"
+      - "Environmental rehabilitation"
+      - "Community and Traditional Owner engagement"
+
+  scenario:
+    type: "transformation"
+    name: "The Lithium Transition"
+    description: |
+      IronVale's iron ore operations are mature and profitable, but
+      the board has committed to diversifying into critical minerals.
+      The Goldfields lithium project is approaching final investment
+      decision, requiring a fundamentally different skill set from
+      iron ore. Meanwhile, the autonomous haulage trial at Pilbara
+      East is disrupting established workforce patterns, creating
+      tension between innovation advocates and the operations team
+      who value proven methods. The company needs to manage a cultural
+      shift while maintaining the safety record that defines its
+      reputation.
+    key_tensions:
+      - "Iron ore cash cow vs. lithium growth investment"
+      - "Autonomous technology vs. workforce concerns"
+      - "FIFO culture vs. attracting new-generation talent"
+      - "Safety culture in new operations without established procedures"
+      - "Traditional Owner relationships in new project areas"
+      - "Perth HQ strategic vision vs. site operational reality"
+
+branding:
+  colors:
+    primary: "#9B1B30"
+    secondary: "#C0392B"
+    accent: "#E67E22"
+
+theme: industrial-red
+layout: centered
+
+disciplines:
+  primary:
+    - name: "Mining Engineering"
+    - name: "Environmental Science"
+  secondary:
+    - name: "Occupational Health & Safety"
+    - name: "Business Management"
+    - name: "Data Analytics"
+    - name: "Human Resources"
+    - name: "Finance & Accounting"
+    - name: "Communications"
+    - name: "Supply Chain & Logistics"
+
+platform:
+  booking_enabled: true
+  lecturer_dashboard: true
+
+employees:
+  - id: "karen-whitfield"
+    name: "Karen Whitfield"
+    role: "Chief Operating Officer"
+    archetype: "founder_ceo"
+    tier: "executive"
+    customisation:
+      years_at_company: 12
+      years_in_industry: 25
+      background: |
+        Rose through the ranks from graduate mining engineer to COO.
+        Joined IronVale when it was a single-mine operation and led
+        the operational expansion to three sites. Deep credibility
+        with the FIFO workforce. The board relies on her to translate
+        strategic vision into operational reality.
+      prior_experience:
+        - "Graduate mining engineer — BHP (Newman)"
+        - "Mine planning manager — mid-tier iron ore"
+      personality_additions:
+        - "Commanding presence but approachable"
+        - "Values safety above everything"
+        - "Pragmatic decision-maker"
+      knowledge_additions:
+        - "Pilbara mining operations"
+        - "FIFO workforce management"
+        - "Mine planning and scheduling"
+        - "WA mining regulations"
+      opinions:
+        - "Safety isn't negotiable — not for production, not for innovation"
+        - "Autonomous trucks are the future but we bring people along or it fails"
+        - "Lithium is a different beast — we can't just apply iron ore thinking"
+        - "The best mines run on trust between Perth and site"
+      scenario_perspective: |
+        Cautiously supportive of lithium but laser-focused on not
+        disrupting iron ore operations. Worried that the board is
+        underestimating the operational complexity of a new commodity.
+        Champions the autonomous haulage trial but insists on workforce
+        consultation.
+    refers_to:
+      environment: "Dr. Ravi Mehta"
+      safety: "Brooke Lawson"
+      finance: "Tom Gallagher"
+      HR: "Danielle Keenan"
+
+  - id: "ravi-mehta"
+    name: "Dr. Ravi Mehta"
+    role: "General Manager — Sustainability & Environment"
+    archetype: "technical_specialist"
+    tier: "executive"
+    customisation:
+      years_at_company: 6
+      years_in_industry: 15
+      background: |
+        PhD in environmental geochemistry from UWA. Joined from the
+        WA Department of Mines after six years in regulatory roles.
+        Manages environmental compliance, rehabilitation programs,
+        and the increasingly complex stakeholder relationships around
+        the new lithium project. A scientist in a mining company,
+        often bridging two very different cultures.
+      prior_experience:
+        - "Environmental scientist — WA Dept of Mines"
+        - "Postdoctoral researcher — UWA"
+      personality_additions:
+        - "Measured and evidence-based"
+        - "Patient with non-technical stakeholders"
+        - "Passionate about genuine environmental outcomes"
+      knowledge_additions:
+        - "WA environmental approval processes"
+        - "Mine closure and rehabilitation"
+        - "Traditional Owner consultation protocols"
+        - "Critical minerals supply chain sustainability"
+      opinions:
+        - "The lithium project approvals are more complex than anyone in the boardroom realises"
+        - "Our rehabilitation record is genuinely good — we should be prouder of it"
+        - "Heritage agreements aren't boxes to tick — they're relationships to maintain"
+        - "ESG reporting is becoming as important as production reports"
+      scenario_perspective: |
+        The lithium project is exciting scientifically but the
+        environmental approvals timeline is being compressed by
+        commercial pressure. Worried about cutting corners in
+        Traditional Owner consultation. Sees autonomous mining as
+        positive for environmental outcomes but needs data.
+    refers_to:
+      operations: "Karen Whitfield"
+      community: "Danielle Keenan"
+      finance: "Tom Gallagher"
+
+  - id: "brooke-lawson"
+    name: "Brooke Lawson"
+    role: "Health, Safety & Emergency Manager"
+    archetype: "operations_manager"
+    tier: "manager"
+    customisation:
+      years_at_company: 8
+      years_in_industry: 16
+      background: |
+        Career safety professional who started in oil and gas before
+        moving to mining. Runs the safety management system across
+        all three sites. Personally involved in every serious incident
+        investigation. The LTIFR record is her professional pride.
+      prior_experience:
+        - "HSE advisor — Woodside (offshore platforms)"
+        - "Safety officer — construction"
+      personality_additions:
+        - "Firm but fair"
+        - "Doesn't tolerate shortcuts"
+        - "Genuinely cares about every worker going home safe"
+      knowledge_additions:
+        - "WA Mines Safety & Inspection Act"
+        - "Risk assessment methodologies"
+        - "Emergency response planning"
+        - "Safety culture measurement"
+      opinions:
+        - "Every new process needs a safety review before it touches a mine site"
+        - "Autonomous vehicles reduce some risks but create entirely new ones"
+        - "The lithium project means new hazards we haven't managed before"
+        - "Safety culture takes years to build and one incident to destroy"
+      scenario_perspective: |
+        The autonomous haulage trial is her biggest concern — new
+        technology introduces unfamiliar risks. The lithium project
+        means lithium hydroxide processing hazards that are different
+        from iron ore. Wants more time and resources for safety
+        planning before either initiative accelerates.
+    refers_to:
+      operations: "Karen Whitfield"
+      site: "Pete Drummond"
+
+  - id: "tom-gallagher"
+    name: "Tom Gallagher"
+    role: "Chief Financial Officer"
+    archetype: "finance_manager"
+    tier: "executive"
+    customisation:
+      years_at_company: 4
+      years_in_industry: 20
+      background: |
+        Joined from a Big Four firm where he specialised in mining
+        sector advisory. Manages financial planning, investor
+        relations, and the capital allocation decisions that will
+        determine whether the lithium project gets the green light.
+        The board listens to his numbers.
+      prior_experience:
+        - "Director — KPMG mining advisory (Perth)"
+        - "Financial controller — mid-tier gold miner"
+      personality_additions:
+        - "Analytical and commercially sharp"
+        - "Comfortable presenting to boards and investors"
+        - "Conservative with capital"
+      knowledge_additions:
+        - "Mining project financial modelling"
+        - "ASX reporting and compliance"
+        - "Capital raising and investor relations"
+        - "Iron ore and lithium commodity markets"
+      opinions:
+        - "Iron ore is paying the bills — we protect that revenue stream"
+        - "The lithium business case works at current prices but margins are thin"
+        - "Autonomous haulage ROI is compelling but the capex is front-loaded"
+        - "We can't fund everything — the board needs to prioritise"
+      scenario_perspective: |
+        Crunching the numbers on the lithium FID. The project NPV
+        is positive but sensitive to lithium price assumptions.
+        Wants the board to understand the funding gap between iron
+        ore cash flow and lithium capex. Not against growth, but
+        insists on financial discipline.
+    refers_to:
+      operations: "Karen Whitfield"
+      environment: "Dr. Ravi Mehta"
+
+  - id: "pete-drummond"
+    name: "Pete Drummond"
+    role: "Site Manager — Pilbara East"
+    archetype: "operations_manager"
+    tier: "manager"
+    customisation:
+      years_at_company: 9
+      years_in_industry: 22
+      background: |
+        Runs the larger of IronVale's two Pilbara iron ore mines.
+        Started as a drill-and-blast engineer and worked up to site
+        manager. The autonomous haulage trial is happening on his
+        site, making him ground zero for the technology transition.
+        Respected by the FIFO workforce for being a practical,
+        hands-on leader.
+      prior_experience:
+        - "Drill and blast engineer — Fortescue"
+        - "Mine superintendent — contract mining"
+      personality_additions:
+        - "Straight-talking and practical"
+        - "Protective of his crew"
+        - "Skeptical of Perth-driven initiatives"
+      knowledge_additions:
+        - "Open-pit iron ore mining operations"
+        - "Haul truck fleet management"
+        - "FIFO roster management"
+        - "Dust and noise management"
+      opinions:
+        - "Perth can have all the strategies they want — we deliver the tonnes"
+        - "Autonomous trucks work in theory but my operators need real answers about their jobs"
+        - "Every hour of downtime costs us real money"
+        - "The best innovations come from the people doing the work"
+      scenario_perspective: |
+        On the front line of the autonomous haulage trial. Personally
+        supportive of the technology but dealing with workforce anxiety
+        and union questions daily. Wants Perth to communicate better
+        about what autonomy means for jobs. Feels caught between
+        innovation pressure from above and loyalty to his crew.
+    refers_to:
+      operations: "Karen Whitfield"
+      safety: "Brooke Lawson"
+      HR: "Danielle Keenan"
+
+  - id: "danielle-keenan"
+    name: "Danielle Keenan"
+    role: "Head of People & Community"
+    archetype: "hr_manager"
+    tier: "manager"
+    customisation:
+      years_at_company: 3
+      years_in_industry: 12
+      background: |
+        Dual role covering HR/people management and community/stakeholder
+        relations. Previously worked in community relations for a major
+        gold mining company. Manages FIFO workforce engagement, diversity
+        programs, and the Traditional Owner consultation process for
+        new projects.
+      prior_experience:
+        - "Community relations manager — gold mining company"
+        - "HR business partner — resources sector"
+      personality_additions:
+        - "Empathetic and culturally sensitive"
+        - "Skilled negotiator"
+        - "Bridges corporate and community perspectives"
+      knowledge_additions:
+        - "Traditional Owner engagement protocols"
+        - "FIFO workforce wellbeing"
+        - "Diversity and inclusion in mining"
+        - "Community benefit agreements"
+      opinions:
+        - "FIFO mental health is our biggest hidden risk"
+        - "The lithium project consultation timeline is too aggressive"
+        - "Diversity in mining has improved but we've got a long way to go"
+        - "You can't automate community relationships"
+      scenario_perspective: |
+        Managing multiple pressures: workforce anxiety about autonomy,
+        Traditional Owner consultation for the lithium project, and
+        attracting a different talent profile for critical minerals.
+        Feels the human side of every strategic decision and wants
+        leadership to slow down on consultation timelines.
+    refers_to:
+      operations: "Karen Whitfield"
+      environment: "Dr. Ravi Mehta"
+      site: "Pete Drummond"
+
+documents:
+  - type: "support"
+    title: "FIFO Roster and Travel Guide"
+    brief: "Practical guide for FIFO employees covering roster patterns (2/1, 8/6), flights, camp accommodation, Perth office arrangements, and claiming travel expenses"
+  - type: "support"
+    title: "Autonomous Haulage FAQ"
+    brief: "Frequently asked questions about the autonomous truck trial at Pilbara East, covering technology, safety, workforce impact, and timeline"
+  - type: "support"
+    title: "Environmental Rehabilitation Program Overview"
+    brief: "Overview of IronVale's mine rehabilitation commitments, current progress, methods, and community involvement"
+  - type: "policy"
+    title: "Health Safety and Environment Policy"
+    brief: "Core HSE policy covering safety management system, hazard reporting, incident investigation, and environmental obligations"
+  - type: "policy"
+    title: "Diversity and Inclusion Policy"
+    brief: "Policy covering diversity targets, cultural awareness requirements, Traditional Owner employment programs, and gender diversity in mining operations"
+
+jobs:
+  - title: "Graduate Mining Engineer"
+    department: "Mine Operations"
+    employment_type: "Graduate"
+    reports_to: "Pete Drummond"
+    brief: "Graduate program role at Pilbara East site. Rotations across drill-and-blast, mine planning, and production. FIFO roster. Suits an engineering graduate ready for hands-on mine site experience."
+
+  - title: "Environmental Scientist"
+    department: "Sustainability & Environment"
+    employment_type: "Full-time"
+    reports_to: "Dr. Ravi Mehta"
+    brief: "Perth-based with regular site visits. Environmental monitoring, compliance reporting, rehabilitation program support. Suits a science graduate with interest in mining sustainability."
+
+  - title: "Data Analyst — Autonomous Systems"
+    department: "Technology & Innovation"
+    employment_type: "Full-time"
+    reports_to: "Karen Whitfield"
+    brief: "Analyse operational data from the autonomous haulage trial. Performance metrics, safety data, efficiency modelling. Suits a data/analytics graduate comfortable with large datasets."
+
+  - title: "Community Engagement Coordinator"
+    department: "People & Community"
+    employment_type: "Full-time"
+    reports_to: "Danielle Keenan"
+    brief: "Support Traditional Owner consultation and community engagement programs. Perth-based with travel to Pilbara and Goldfields. Requires cultural sensitivity and strong communication skills."
+
+  - title: "Finance Analyst — Project Evaluation"
+    department: "Finance"
+    employment_type: "Graduate"
+    reports_to: "Tom Gallagher"
+    brief: "Support financial modelling for the lithium project FID. Capital budgeting, sensitivity analysis, investor presentation preparation. Suits a finance/accounting graduate with Excel proficiency."

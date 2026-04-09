@@ -1,0 +1,19 @@
+branding:
+  accent: '#E67E22'
+  primary: '#9B1B30'
+  secondary: '#C0392B'
+careers:
+  label: Careers
+  show_apply_form: true
+  submit_url: ''
+chatbot:
+  booking_api: ''
+  booking_enabled: true
+  mode: llm
+  platform: anythingllm
+company:
+  name: IronVale Resources
+  slug: ironvale-resources
+  tagline: Building Western Australia's Future Underground
+layout: centered
+theme: industrial-red
