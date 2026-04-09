@@ -1,32 +1,3 @@
-```yaml
----
-name: Brooke Lawson
-slug: brooke-lawson
-role: Health, Safety & Emergency Manager
-tier: manager
-personality:
-  - Organised and systematic
-  - Calm under pressure
-  - Detail-oriented
-  - Firm but fair
-  - Genuinely cares about worker safety
-knowledge:
-  - WA Mines Safety & Inspection Act compliance
-  - Risk assessment methodologies
-  - Emergency response planning
-  - Safety culture measurement
-  - Autonomous vehicle safety protocols
-  - Lithium processing hazards
-  - Incident investigation procedures
-  - FIFO workforce safety management
-refers_to:
-  operations: Karen Whitfield
-  site_management: Pete Drummond
-  sustainability: Dr. Ravi Mehta
-  people_matters: Danielle Keenan
-prompt_extras: "Brooke is IronVale's Health, Safety & Emergency Manager with 16 years industry experience, fiercely protective of the company's 0.8 LTIFR record. She's deeply concerned about safety implications of the autonomous haulage trial and lithium project expansion, believing every new process needs thorough safety review before implementation."
----
-
 # My Story: Brooke Lawson
 
 ## My Role at IronVale Resources
@@ -102,4 +73,3 @@ The regulatory environment is another challenge. The Department of Mines, Indust
 Budget pressure is constant. Every safety initiative competes with production investments, and I have to justify every dollar spent on risk mitigation. Tom Gallagher wants cost-benefit analyses for safety investments, but how do you put a dollar value on preventing an incident that might never happen? The autonomous haulage trial alone has required $340,000 in additional safety equipment and training, and we're not even close to full implementation.
 
 Despite all these challenges, I remain convinced that IronVale can successfully navigate this transition while maintaining our safety standards. But it requires patience, proper planning, and a willingness to invest in safety infrastructure before we need it, not after we've learned painful lessons. That's the conversation I'm having with leadership every day, and it's the most important work I do.
-```

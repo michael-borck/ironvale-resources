@@ -1,4 +1,3 @@
-```yaml
 name: Dr. Ravi Mehta
 slug: ravi-mehta
 role: General Manager — Sustainability & Environment
