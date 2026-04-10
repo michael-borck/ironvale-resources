@@ -359,6 +359,11 @@ jobs:
     employment_type: "Graduate"
     reports_to: "Pete Drummond"
     brief: "Graduate program role at Pilbara East site. Rotations across drill-and-blast, mine planning, and production. FIFO roster. Suits an engineering graduate ready for hands-on mine site experience."
+    additional_postings:
+      - agency: "WestForce Staffing"
+        title: "Graduate Mining Engineer | Top Tier WA Iron Ore Producer"
+        confidential: true
+        description: "WestForce Staffing is exclusively engaged with one of Western Australia's premier mid-tier iron ore producers to recruit a Graduate Mining Engineer. Based in Perth with FIFO rotations to a Pilbara operation, this role offers exposure to autonomous haulage technology, traditional mining methods, and a respected safety culture. Our client offers strong graduate development pathways and competitive remuneration. Company name disclosed to shortlisted candidates."
 
   - title: "Environmental Scientist"
     department: "Sustainability & Environment"
