@@ -8,6 +8,13 @@ company:
   industry: "managed_it"
   location: "Perth, Western Australia"
 
+  # Mining culture — early starts, shorter window
+  business_hours:
+    start: 7        # 7am start (mine shift pattern)
+    end: 15         # 3pm finish
+    days: [1, 2, 3, 4, 5]
+    description: "Mining schedule — early starts"
+
   profile:
     founded: 2009
     employees: 180
