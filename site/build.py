@@ -46,16 +46,38 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
-    """Parse YAML frontmatter from a markdown file."""
+    """Parse YAML frontmatter from a markdown file.
+
+    Handles three variants the upstream generator sometimes emits:
+      1. Plain `---\\nyaml\\n---\\nbody`
+      2. Code-fenced wrapper around the whole thing: ```yaml\\n---\\nyaml\\n---\\nbody```
+      3. Code-fenced YAML block followed by markdown body, with no inner `---`:
+         ```yaml\\nyaml\\n```\\nbody
+    """
     text = text.strip()
-    # Strip code fence wrappers the AI sometimes adds
+
+    # Variant 3: ```yaml ... ``` then body, no inner `---`
     if text.startswith("```"):
+        opening_nl = text.find("\n")
+        if opening_nl != -1:
+            rest = text[opening_nl + 1:]
+            close_idx = rest.find("\n```")
+            if close_idx != -1:
+                yaml_block = rest[:close_idx]
+                body = rest[close_idx + len("\n```"):].strip()
+                if "---" not in yaml_block:
+                    try:
+                        meta = yaml.safe_load(yaml_block) or {}
+                    except yaml.YAMLError:
+                        meta = {}
+                    return meta, body
         first_nl = text.find("\n")
         if first_nl != -1:
             text = text[first_nl + 1:]
         if text.endswith("```"):
             text = text[:-3]
         text = text.strip()
+
     m = FRONTMATTER_RE.match(text)
     if not m:
         return {}, text
