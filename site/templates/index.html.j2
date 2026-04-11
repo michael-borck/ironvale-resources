@@ -1,45 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IronVale Resources — Building Western Australia's Future Underground</title>
-    <meta name="description" content="Mid-tier Western Australian iron ore and lithium producer. Pilbara operations, Goldfields lithium development, autonomous mining innovation.">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="brand">
-                <div class="brand-logo">IV</div>
-                <div class="brand-name">
-                    <strong>IronVale</strong>
-                    <span>Resources / ASX:IVR</span>
-                </div>
-            </a>
-            <nav class="nav">
-                <a href="/" class="active">Home</a>
-                <a href="/about.html" class="">About</a>
-                <a href="/operations.html" class="">Operations</a>
-                <a href="/careers.html" class="">Careers</a>
-                <a href="/contact.html" class="">Contact</a>
-                <a href="/careers.html" class="nav-cta">Apply</a>
-            </nav>
-        </div>
-    </header>
+{% extends "base.html.j2" %}
 
-    <main>
+{% block title %}IronVale Resources — Building Western Australia's Future Underground{% endblock %}
+
+{% block content %}
 <section class="hero">
     <div class="hero-inner">
         <div class="hero-content">
-            <p class="eyebrow">ASX:IVR / Mid-tier producer / Est. 2009</p>
+            <p class="eyebrow">ASX:IVR / Mid-tier producer / Est. {{ profile.founded or 2009 }}</p>
             <h1>
                 Iron Ore.<br>
                 Lithium.<br>
                 <span class="accent">Pilbara grit.</span>
             </h1>
-            <p class="hero-tagline">Building Western Australia's Future Underground Two active iron ore mines, one critical minerals project on the rise, and a workforce that knows the country.</p>
+            <p class="hero-tagline">{{ company.tagline or "Building Western Australia's Future Underground." }} Two active iron ore mines, one critical minerals project on the rise, and a workforce that knows the country.</p>
             <div class="hero-cta">
                 <a href="/operations.html" class="btn btn-primary btn-arrow">Our operations</a>
                 <a href="/careers.html" class="btn btn-ghost btn-arrow">Work with us</a>
@@ -59,7 +32,7 @@
             </div>
             <div class="stat">
                 <div class="stat-label">Workforce</div>
-                <div class="stat-value">180</div>
+                <div class="stat-value">{{ profile.employees or 180 }}</div>
                 <div class="stat-unit">FIFO + Perth HQ</div>
             </div>
             <div class="stat stat-accent">
@@ -170,27 +143,16 @@
     <div class="wrap">
         <div class="scenario">
             <p class="scenario-label">/// The current chapter</p>
-            <h3>The Lithium Transition</h3>
-            <p>IronVale's iron ore operations are mature and profitable, but
-the board has committed to diversifying into critical minerals.
-The Goldfields lithium project is approaching final investment
-decision, requiring a fundamentally different skill set from
-iron ore. Meanwhile, the autonomous haulage trial at Pilbara
-East is disrupting established workforce patterns, creating
-tension between innovation advocates and the operations team
-who value proven methods. The company needs to manage a cultural
-shift while maintaining the safety record that defines its
-reputation.
-</p>
+            <h3>{{ scenario.name or "The Lithium Transition" }}</h3>
+            <p>{{ scenario.description or "IronVale's iron ore operations are mature and profitable, but the board has committed to diversifying into critical minerals." | trim }}</p>
 
+            {% if scenario.key_tensions %}
             <ul class="scenario-tensions">
-                <li>Iron ore cash cow vs. lithium growth investment</li>
-                <li>Autonomous technology vs. workforce concerns</li>
-                <li>FIFO culture vs. attracting new-generation talent</li>
-                <li>Safety culture in new operations without established procedures</li>
-                <li>Traditional Owner relationships in new project areas</li>
-                <li>Perth HQ strategic vision vs. site operational reality</li>
+                {% for tension in scenario.key_tensions[:6] %}
+                <li>{{ tension }}</li>
+                {% endfor %}
             </ul>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -206,46 +168,4 @@ reputation.
         </div>
     </div>
 </section>
-    </main>
-
-    <footer class="footer">
-        <div class="wrap">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>IronVale</h3>
-                    <p>Mid-tier Western Australian producer of iron ore and critical minerals. Headquartered in Perth, operating across the Pilbara and Goldfields-Esperance regions.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="/about.html">About IronVale</a></li>
-                        <li><a href="/operations.html">Operations</a></li>
-                        <li><a href="/careers.html">Careers</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>For Staff</h4>
-                    <ul>
-                        <li><a href="/staff/">Staff portal</a></li>
-                        <li><a href="/staff/directory.html">Directory</a></li>
-                        <li><a href="/staff/documents.html">Documents</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Country</h4>
-                    <ul>
-                        <li><a href="/about.html#country">Acknowledgement</a></li>
-                        <li><a href="/about.html#heritage">Heritage agreements</a></li>
-                        <li><a href="/about.html#community">Community</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 IronVale Resources Ltd / ABN 00 000 000 000</p>
-                <p class="footer-disclaimer">Fictional company — part of a Curtin University educational simulation. Not a real ASX-listed entity.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff directory — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap">
+        <p class="eyebrow">Staff portal / Directory</p>
+        <h1 style="margin-bottom: var(--iv-px-5);">Who's who.</h1>
+        <p class="lead" style="font-size: 1.2rem; margin-bottom: var(--iv-px-6);">Executive bench and operational leads. Click any name to see their profile and start a chat.</p>
+
+        <div class="feature-grid">
+            {% for emp in employees %}
+            <article class="feature">
+                <div class="feature-num">{{ "%02d"|format(loop.index) }} / {{ (emp.tier or "STAFF")|upper }}</div>
+                <h3 style="font-size: 1.25rem;">{{ emp.name }}</h3>
+                <p style="color: var(--iv-rust); font-family: var(--iv-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--iv-px-3);">{{ emp.role }}</p>
+                <p style="font-size: 0.9rem;">{{ (emp.background or "")[:160] }}{% if (emp.background or "")|length > 160 %}…{% endif %}</p>
+                <div style="margin-top: var(--iv-px-3); padding-top: var(--iv-px-3); border-top: 1px solid var(--iv-line);">
+                    <p class="mono" style="font-size: 0.7rem;">Chat assistant — coming soon</p>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

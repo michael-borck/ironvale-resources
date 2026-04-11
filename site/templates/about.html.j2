@@ -1,0 +1,86 @@
+{% extends "base.html.j2" %}
+
+{% block title %}About — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap">
+        <p class="eyebrow">About IronVale</p>
+        <h1 style="max-width: 18ch; margin-bottom: var(--iv-px-5);">A Western Australian story, still being written.</h1>
+        <p class="lead" style="max-width: 60ch; font-size: 1.35rem;">Founded in {{ profile.founded or 2009 }} as a single-pit operation in the Pilbara. Three sites, {{ profile.employees or 180 }} people, and a board that picks its bets carefully.</p>
+    </div>
+</section>
+
+<section class="section-pad" style="background: var(--iv-bg-2);">
+    <div class="wrap">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Profile</p>
+                <h2>Who we are.</h2>
+            </div>
+            <div class="lead">
+                {{ profile.description or "" | trim }}
+            </div>
+        </div>
+
+        {% if profile.key_facts %}
+        <div class="feature-grid">
+            {% for fact in profile.key_facts[:6] %}
+            <article class="feature">
+                <div class="feature-num">{{ "%02d"|format(loop.index) }}</div>
+                <p style="color: var(--iv-text); font-size: 1.05rem; line-height: 1.4; font-family: var(--iv-font-display); text-transform: uppercase;">{{ fact }}</p>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section-pad" id="country">
+    <div class="wrap-narrow">
+        <p class="eyebrow">Country</p>
+        <h2 style="margin-bottom: var(--iv-px-5);">Acknowledgement.</h2>
+        <p style="color: var(--iv-text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 65ch;">
+            IronVale Resources operates on the lands of the Nyiyaparli, Banyjima, and Martu peoples in the Pilbara, and the Wongatha people in the Goldfields-Esperance region. We acknowledge their continuing connection to country and culture, and we pay respect to Elders past and present.
+        </p>
+        <p style="color: var(--iv-text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 65ch; margin-top: var(--iv-px-3);">
+            Heritage agreements aren't a checklist for us. They're relationships we maintain over years, and our Sustainability and People teams work closely with Traditional Owner groups before any new ground is disturbed.
+        </p>
+    </div>
+</section>
+
+<section class="section-pad" id="heritage" style="background: var(--iv-bg-2);">
+    <div class="wrap">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Leadership</p>
+                <h2>The people in charge.</h2>
+            </div>
+            <p class="lead">A small executive bench by industry standards. That's deliberate — fewer layers, faster calls.</p>
+        </div>
+
+        <div class="feature-grid">
+            {% for emp in employees if emp.tier == 'executive' %}
+            <article class="feature">
+                <div class="feature-num">{{ "%02d"|format(loop.index) }} / EXEC</div>
+                <h3 style="font-size: 1.25rem;">{{ emp.name }}</h3>
+                <p style="color: var(--iv-rust); font-family: var(--iv-font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--iv-px-3);">{{ emp.role }}</p>
+                <p>{{ emp.background[:240] if emp.background else "" }}{% if emp.background and emp.background|length > 240 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <div class="wrap">
+        <div class="cta-banner-inner">
+            <div>
+                <h2>Want to know what we're up to?</h2>
+                <p>The current chapter is the lithium transition. Read about our operations, or jump straight to careers.</p>
+            </div>
+            <a href="/operations.html" class="btn btn-hivis btn-arrow cta-banner-btn">Operations</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

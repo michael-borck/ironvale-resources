@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0c0c0e"/>
+  <g transform="rotate(-5 32 32)">
+    <rect x="8" y="8" width="48" height="48" fill="#c8421e"/>
+    <text x="32" y="44"
+          text-anchor="middle"
+          font-family="'Anton', 'Archivo Narrow', 'Impact', sans-serif"
+          font-size="34"
+          font-weight="400"
+          fill="#f5f1ea"
+          letter-spacing="0.5">IV</text>
+  </g>
+</svg>

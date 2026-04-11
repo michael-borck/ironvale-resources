@@ -1,0 +1,39 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff documents — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap">
+        <p class="eyebrow">Staff portal / Documents</p>
+        <h1 style="margin-bottom: var(--iv-px-5);">Documents & policies.</h1>
+        <p class="lead" style="font-size: 1.2rem; margin-bottom: var(--iv-px-6);">Current versions only. Older versions are archived through the records management system.</p>
+
+        {% if docs.support %}
+        <h2 style="margin-top: var(--iv-px-6); margin-bottom: var(--iv-px-4); font-size: 2rem;">Support guides</h2>
+        <div class="feature-grid">
+            {% for doc in docs.support %}
+            <article class="feature">
+                <div class="feature-num">SUPPORT / {{ "%02d"|format(loop.index) }}</div>
+                <h3 style="font-size: 1.2rem;">{{ doc.title }}</h3>
+                <p style="font-size: 0.9rem;">{{ (doc.body or doc.brief or "")[:180] }}{% if (doc.body or doc.brief or "")|length > 180 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if docs.policy %}
+        <h2 style="margin-top: var(--iv-px-8); margin-bottom: var(--iv-px-4); font-size: 2rem;">Policies</h2>
+        <div class="feature-grid">
+            {% for doc in docs.policy %}
+            <article class="feature">
+                <div class="feature-num">POLICY / {{ "%02d"|format(loop.index) }}</div>
+                <h3 style="font-size: 1.2rem;">{{ doc.title }}</h3>
+                <p style="font-size: 0.9rem;">{{ (doc.body or doc.brief or "")[:180] }}{% if (doc.body or doc.brief or "")|length > 180 %}…{% endif %}</p>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

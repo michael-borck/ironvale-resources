@@ -1,0 +1,31 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff portal — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap">
+        <p class="eyebrow">Staff portal / Internal</p>
+        <h1 style="margin-bottom: var(--iv-px-5);">Welcome back.</h1>
+        <p class="lead" style="font-size: 1.2rem;">Quick links to the things you use every day.</p>
+
+        <div class="feature-grid" style="margin-top: var(--iv-px-6);">
+            <a href="/staff/directory.html" class="feature" style="text-decoration: none;">
+                <div class="feature-num">01 / PEOPLE</div>
+                <h3>Directory</h3>
+                <p>Find a colleague. Reach the right manager. Chat with key staff via the embedded assistants.</p>
+            </a>
+            <a href="/staff/documents.html" class="feature" style="text-decoration: none;">
+                <div class="feature-num">02 / DOCS</div>
+                <h3>Documents</h3>
+                <p>Policies, procedures, FIFO guides, and the autonomous haulage FAQ. All current versions.</p>
+            </a>
+            <a href="#" class="feature" style="text-decoration: none;">
+                <div class="feature-num">03 / OPERATIONS</div>
+                <h3>Site reports</h3>
+                <p>Daily site reports from Pilbara East and Pilbara West. Production, safety, and incident logs.</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

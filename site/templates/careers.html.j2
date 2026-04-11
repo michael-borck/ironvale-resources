@@ -1,0 +1,67 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Careers — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap">
+        <p class="eyebrow">Careers / Graduate intake FY26</p>
+        <h1 style="max-width: 18ch; margin-bottom: var(--iv-px-5);">Real work. Real responsibility. From day one.</h1>
+        <p class="lead" style="max-width: 60ch; font-size: 1.35rem;">We don't run a glossy graduate program. We run real operations and we hand graduates real problems. If you want hand-holding, you'll be bored. If you want to learn fast, keep reading.</p>
+    </div>
+</section>
+
+<section class="section-pad-sm" style="background: var(--iv-bg-2);">
+    <div class="wrap">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">Open roles</p>
+                <h2>{{ jobs|length }} positions open.</h2>
+            </div>
+            <p class="lead">Most roles are based in Perth with rotations to site. Mining roles are FIFO. All roles report to a named manager — see the listing for details.</p>
+        </div>
+
+        <div class="sites-grid">
+            {% for job in jobs %}
+            <article class="site-card" style="display: flex; flex-direction: column;">
+                <span class="site-card-status">{{ job.employment_type or "Full-time" }}</span>
+                <div class="site-card-name" style="font-size: 1.4rem; max-width: 18ch;">{{ job.title }}</div>
+                <div class="site-card-type">{{ job.department or "" }}</div>
+                <p style="color: var(--iv-text-muted); font-size: 0.9rem; margin-bottom: var(--iv-px-3); flex: 1;">{{ (job.brief or job.summary or "")[:200] }}{% if (job.brief or job.summary or "")|length > 200 %}…{% endif %}</p>
+                <a href="/careers/{{ job.slug }}.html" class="btn btn-primary btn-arrow" style="align-self: flex-start;">View role</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+        <div class="section-header">
+            <div>
+                <p class="eyebrow">What to expect</p>
+                <h2>Our hiring process.</h2>
+            </div>
+            <p class="lead">Straightforward. Four steps. No assessment-centre theatrics.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature">
+                <div class="feature-num">STEP 01</div>
+                <h3>Apply</h3>
+                <p>Submit your CV and a short cover letter through the role page. We read everything ourselves — there's no AI screen.</p>
+            </article>
+            <article class="feature">
+                <div class="feature-num">STEP 02</div>
+                <h3>Interview</h3>
+                <p>One conversation with the hiring manager. About 30 minutes. Real questions about the work, not brain teasers.</p>
+            </article>
+            <article class="feature">
+                <div class="feature-num">STEP 03</div>
+                <h3>Offer</h3>
+                <p>Decisions within a week of interviews wrapping up. Salary, conditions, and a start date — all on the table up front.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

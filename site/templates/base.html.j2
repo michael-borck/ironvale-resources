@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}IronVale Resources — Western Australian Mining{% endblock %}</title>
+    <meta name="description" content="{% block description %}Mid-tier Western Australian iron ore and lithium producer. Pilbara operations, Goldfields lithium development, autonomous mining innovation.{% endblock %}">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/styles/main.css">
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="brand">
+                <div class="brand-logo">IV</div>
+                <div class="brand-name">
+                    <strong>IronVale</strong>
+                    <span>Resources / ASX:IVR</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/" class="{% if page == 'index' %}active{% endif %}">Home</a>
+                <a href="/about.html" class="{% if page == 'about' %}active{% endif %}">About</a>
+                <a href="/operations.html" class="{% if page == 'operations' %}active{% endif %}">Operations</a>
+                <a href="/careers.html" class="{% if page == 'careers' %}active{% endif %}">Careers</a>
+                <a href="/contact.html" class="{% if page == 'contact' %}active{% endif %}">Contact</a>
+                <a href="/careers.html" class="nav-cta">Apply</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>IronVale</h3>
+                    <p>Mid-tier Western Australian producer of iron ore and critical minerals. Headquartered in Perth, operating across the Pilbara and Goldfields-Esperance regions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About IronVale</a></li>
+                        <li><a href="/operations.html">Operations</a></li>
+                        <li><a href="/careers.html">Careers</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Staff</h4>
+                    <ul>
+                        <li><a href="/staff/">Staff portal</a></li>
+                        <li><a href="/staff/directory.html">Directory</a></li>
+                        <li><a href="/staff/documents.html">Documents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Country</h4>
+                    <ul>
+                        <li><a href="/about.html#country">Acknowledgement</a></li>
+                        <li><a href="/about.html#heritage">Heritage agreements</a></li>
+                        <li><a href="/about.html#community">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ year }} IronVale Resources Ltd / ABN 00 000 000 000</p>
+                <p class="footer-disclaimer">Fictional company — part of a Curtin University educational simulation. Not a real ASX-listed entity.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

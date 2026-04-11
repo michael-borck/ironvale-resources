@@ -1,0 +1,20 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Staff login — IronVale Resources{% endblock %}
+
+{% block content %}
+<section class="section-pad">
+    <div class="wrap-narrow">
+        <p class="eyebrow">Staff portal</p>
+        <h1 style="margin-bottom: var(--iv-px-5);">Sign in.</h1>
+        <p class="lead" style="margin-bottom: var(--iv-px-6);">IronVale staff only. Enter your work email and we'll send a 6-digit access code.</p>
+
+        <form id="login-form" style="max-width: 480px; display: grid; gap: var(--iv-px-3); border: 1px solid var(--iv-line); padding: var(--iv-px-5); background: var(--iv-bg-2);">
+            <label class="mono" for="email">Work email</label>
+            <input type="email" id="email" name="email" required placeholder="firstname.lastname@ironvaleresources.com.au" style="padding: var(--iv-px-3); background: var(--iv-bg); border: 1px solid var(--iv-line-2); color: var(--iv-text); font-family: var(--iv-font-mono);">
+            <button type="submit" class="btn btn-primary btn-arrow">Send code</button>
+            <p class="mono" style="margin-top: var(--iv-px-2); font-size: 0.7rem;">Authentication coming soon — placeholder for the WorkReady simulation.</p>
+        </form>
+    </div>
+</section>
+{% endblock %}
