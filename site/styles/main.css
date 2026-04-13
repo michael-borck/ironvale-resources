@@ -998,6 +998,81 @@ section {
 }
 
 /* ============================================================
+   APPLY FORM — inline on job-detail pages
+   ============================================================ */
+
+.apply-section {
+    padding: var(--iv-px-8) 0;
+    background: var(--iv-bg-2);
+    border-top: 1px solid var(--iv-line);
+}
+
+.apply-form {
+    max-width: 640px;
+    display: grid;
+    gap: var(--iv-px-3);
+}
+
+.apply-form label {
+    display: block;
+    font-family: var(--iv-font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--iv-text-muted);
+    margin-bottom: var(--iv-px-1);
+    font-weight: 500;
+}
+
+.apply-form input,
+.apply-form textarea {
+    width: 100%;
+    padding: var(--iv-px-3);
+    background: var(--iv-bg);
+    border: 1px solid var(--iv-line-2);
+    color: var(--iv-text);
+    font-family: var(--iv-font-body);
+    font-size: 0.95rem;
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus {
+    outline: none;
+    border-color: var(--iv-rust);
+    box-shadow: 0 0 0 2px rgba(200, 66, 30, 0.2);
+}
+
+.apply-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.apply-form input[type="file"] {
+    padding: var(--iv-px-2);
+}
+
+.apply-required { color: var(--iv-rust); }
+
+.apply-result {
+    display: none;
+    padding: var(--iv-px-3);
+    margin-top: var(--iv-px-3);
+    font-size: 0.92rem;
+}
+
+.apply-result-success {
+    background: rgba(124, 154, 63, 0.15);
+    border: 1px solid var(--iv-success);
+    color: var(--iv-success);
+}
+
+.apply-result-error {
+    background: rgba(214, 57, 36, 0.1);
+    border: 1px solid var(--iv-danger);
+    color: var(--iv-danger);
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 

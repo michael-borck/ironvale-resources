@@ -7,6 +7,7 @@
     <meta name="description" content="Mid-tier Western Australian iron ore and lithium producer. Pilbara operations, Goldfields lithium development, autonomous mining innovation.">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/styles/main.css">
+<script src="/scripts/apply.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -110,15 +111,36 @@
     </div>
 </section>
 
-<section class="cta-banner">
+<section class="apply-section" id="apply">
     <div class="wrap">
-        <div class="cta-banner-inner">
+        <p class="eyebrow">Apply for this role</p>
+        <h2 style="margin-bottom: var(--iv-px-3);">Sound like you?</h2>
+        <p style="color: var(--iv-text-muted); margin-bottom: var(--iv-px-5); max-width: 50ch;">Submit your CV and a short cover letter. We read everything ourselves.</p>
+
+        <form id="apply-form" class="apply-form" data-api-base="https://workready-api.eduserver.au">
+            <input type="hidden" name="posting_id" value="">
+            <input type="hidden" name="job_title" value="Environmental Scientist">
             <div>
-                <h2>Sound like you?</h2>
-                <p>Submit your CV and a short cover letter. We read everything ourselves. Decisions within a week of interviews wrapping up.</p>
+                <label for="applicant_name">Full name <span class="apply-required">*</span></label>
+                <input type="text" name="applicant_name" id="applicant_name" required>
             </div>
-            <a href="https://ironvaleresources.eduserver.au" class="btn btn-hivis btn-arrow cta-banner-btn">Apply via WorkReady</a>
-        </div>
+            <div>
+                <label for="applicant_email">Email address <span class="apply-required">*</span></label>
+                <input type="email" name="applicant_email" id="applicant_email" required placeholder="firstname.lastname@student.curtin.edu.au">
+            </div>
+            <div>
+                <label for="cover_letter">Cover letter</label>
+                <textarea name="cover_letter" id="cover_letter" rows="5" placeholder="Tell us why you're a good fit for this role…"></textarea>
+            </div>
+            <div>
+                <label for="resume">Resume (PDF) <span class="apply-required">*</span></label>
+                <input type="file" name="resume" id="resume" accept=".pdf" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-arrow">Submit application</button>
+            </div>
+            <div id="apply-result" class="apply-result"></div>
+        </form>
     </div>
 </section>
     </main>
