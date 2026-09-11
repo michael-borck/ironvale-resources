@@ -65,7 +65,7 @@ Key design principles:
 **Topsoil Management**
 Direct return methodology is preferred where operationally feasible. At Pilbara West, we maintain an average topsoil stockpile volume of 45,000 cubic meters, with documented viability testing every 6 months.
 
-Recent trials with mycorrhizal inoculation have shown 23% improved seedling establishment rates compared to standard topsoil application. Brooke Lawson's team has been working with Curtin University to optimize application rates across different soil types.
+Recent trials with mycorrhizal inoculation have shown 23% improved seedling establishment rates compared to standard topsoil application. Brooke Lawson's team has been working with a Perth university research group to optimise application rates across different soil types.
 
 ### Revegetation Programs
 
@@ -182,7 +182,7 @@ Brooke Lawson has developed a cross-training program allowing operations staff t
 
 ### Current Research Projects
 
-**Curtin University Collaboration**
+**University Research Collaboration**
 - Mycorrhizal inoculation optimization (2023-2025)
 - Drought tolerance screening of local provenance seed (ongoing)
 - Remote sensing for rehabilitation monitoring (pilot phase)

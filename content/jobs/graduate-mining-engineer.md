@@ -94,7 +94,7 @@ As IronVale transitions toward critical minerals with our upcoming Goldfields li
 
 Submit your application including cover letter, academic transcripts, and CV through our careers portal. Applications close **Friday, March 15, 2024**.
 
-We'll be attending the WA Mining Engineering Career Fair at Curtin University on March 8th - come meet Pete Drummond and other team members to learn more about life at IronVale.
+We'll be attending the WA Mining Engineering Career Fair in Perth on March 8th - come meet Pete Drummond and other team members to learn more about life at IronVale.
 
 Successful candidates will participate in a two-stage interview process including technical assessment and site visit. Final offers will be made by April 30th for a July 2024 program commencement.
 
